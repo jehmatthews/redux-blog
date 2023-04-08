@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { selectPostById, updatePost } from "./postsSlice";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -51,7 +51,7 @@ const EditPostForm = () => {
     }
   }
 
-  const userOptions = users.map(user => (
+  const usersOptions = users.map(user => (
     <option
       key={user.id}
       value={user.id}
@@ -73,7 +73,7 @@ const EditPostForm = () => {
         <label htmlFor="postAuthor">Author:</label>
         <select id="postAuthor" defaultValue={userId} onChange={onAuthorChanged}>
           <option value=""></option>
-          {userOptions}
+          {usersOptions}
         </select>
         <label htmlFor="postContent">Content:</label>
         <textarea
